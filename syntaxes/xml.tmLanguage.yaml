@@ -1,0 +1,21 @@
+$schema: "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json"
+name: "UI5"
+patterns:
+  - include: "#keywords"
+  - include: "#strings"
+  - include: "#path-binding"
+
+repository:
+  keywords:
+    patterns:
+      - name: "keyword.control.ui5"
+        match: "\\b(if|while|for|return)\\b"
+  strings:
+    name: "string.quoted.double.ui5"
+    begin: '"'
+    end: '"'
+    patterns:
+      - name: "constant.character.escape.ui5"
+        match: "\\\\."
+
+scopeName: "text.xml"

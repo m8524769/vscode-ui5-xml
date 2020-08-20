@@ -1,0 +1,44 @@
+{
+  "name": "ui5-xml-support",
+  "displayName": "UI5 XML Support",
+  "description": "Syntax highlighting for SAPUI5/OPENUI5 XML view",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.48.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "scripts": {
+    "compile": "js-yaml syntaxes/xml.tmLanguage.yaml > syntaxes/xml.tmLanguage.json"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "xml",
+        "aliases": [
+          "XML",
+          "xml"
+        ],
+        "extensions": [
+          ".view.xml",
+          ".fragment.xml"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "xml",
+        "scopeName": "text.xml",
+        "path": "./syntaxes/xml.tmLanguage.json",
+        "embeddedLanguages": {
+          "text.xml": "xml"
+				}
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^3.14.0"
+  }
+}
