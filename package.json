@@ -33,7 +33,12 @@
         "scopeName": "text.xml",
         "path": "./syntaxes/xml.tmLanguage.json",
         "embeddedLanguages": {
-          "text.xml": "xml"
+          "text.xml": "xml",
+          "text.html": "html",
+          "source.js": "javascript"
+				},
+        "tokenTypes": {
+					"meta.tag string.quoted": "other"
 				}
       }
     ]
