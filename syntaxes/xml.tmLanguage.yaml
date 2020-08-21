@@ -83,6 +83,7 @@ patterns:
       - include: "#tagStuff"
   - include: "#entity"
   - include: "#bare-ampersand"
+  - include: "#accessor"
   - include: "#dataBinding"
   - include: "#dataBindingInExpression"
   - begin: "<%@"
@@ -139,17 +140,25 @@ repository:
   bare-ampersand:
     match: "&"
     name: invalid.illegal.bad-ampersand.xml
+  accessor:
+    match: "[a-zA-Z0-9_]+(>/|/|>)"
+    captures:
+      "1":
+        name: punctuation.accessor.js
   dataBinding:
-    begin: "\\{"
+    begin: "(\\{)(:?=)?"
     beginCaptures:
-      "0":
+      "1":
         name: punctuation.definition.block.js
+      "2":
+        name: keyword.operator.assignment.js
     end: "}"
     endCaptures:
       "0":
         name: punctuation.definition.block.js
     name: variable.other.readwrite.js
     patterns:
+      - include: "#accessor"
       - include: "#dataBindingInExpression"
       - include: source.js
   dataBindingInExpression:
@@ -163,6 +172,7 @@ repository:
         name: punctuation.definition.template-expression.end.js
     name: variable.other.readwrite.js
     patterns:
+      - include: "#accessor"
       - include: source.js
   doublequotedString:
     begin: '"'

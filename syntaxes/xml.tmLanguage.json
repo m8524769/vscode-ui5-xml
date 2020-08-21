@@ -141,6 +141,9 @@
       "include": "#bare-ampersand"
     },
     {
+      "include": "#accessor"
+    },
+    {
       "include": "#dataBinding"
     },
     {
@@ -237,11 +240,22 @@
       "match": "&",
       "name": "invalid.illegal.bad-ampersand.xml"
     },
+    "accessor": {
+      "match": "[a-zA-Z0-9_]+(>/|/|>)",
+      "captures": {
+        "1": {
+          "name": "punctuation.accessor.js"
+        }
+      }
+    },
     "dataBinding": {
-      "begin": "\\{",
+      "begin": "(\\{)(:?=)?",
       "beginCaptures": {
-        "0": {
+        "1": {
           "name": "punctuation.definition.block.js"
+        },
+        "2": {
+          "name": "keyword.operator.assignment.js"
         }
       },
       "end": "}",
@@ -252,6 +266,9 @@
       },
       "name": "variable.other.readwrite.js",
       "patterns": [
+        {
+          "include": "#accessor"
+        },
         {
           "include": "#dataBindingInExpression"
         },
@@ -275,6 +292,9 @@
       },
       "name": "variable.other.readwrite.js",
       "patterns": [
+        {
+          "include": "#accessor"
+        },
         {
           "include": "source.js"
         }
