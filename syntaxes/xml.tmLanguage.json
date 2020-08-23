@@ -239,6 +239,39 @@
       "match": "/",
       "name": "keyword.operator.arithmetic.js"
     },
+    "eventParameter": {
+      "match": "\\$(parameters|source|event|controller)",
+      "name": "variable.parameter.js"
+    },
+    "function": {
+      "begin": "([a-zA-Z_][a-zA-Z0-9_]+)(\\()",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.js"
+        },
+        "2": {
+          "name": "meta.brace.round.js"
+        }
+      },
+      "end": "\\)",
+      "endCaptures": {
+        "0": {
+          "name": "meta.brace.round.js"
+        }
+      },
+      "name": "variable.other.readwrite.js",
+      "patterns": [
+        {
+          "include": "#dataBindingInExpression"
+        },
+        {
+          "include": "#eventParameter"
+        },
+        {
+          "include": "source.js"
+        }
+      ]
+    },
     "expression": {
       "begin": "\\{:?=",
       "beginCaptures": {
@@ -306,6 +339,9 @@
           "include": "#accessor"
         },
         {
+          "include": "#eventParameter"
+        },
+        {
           "include": "source.js"
         }
       ]
@@ -333,6 +369,9 @@
         },
         {
           "include": "#expression"
+        },
+        {
+          "include": "#function"
         },
         {
           "include": "#dataBinding"
@@ -407,6 +446,9 @@
         },
         {
           "include": "#expression"
+        },
+        {
+          "include": "#function"
         },
         {
           "include": "#dataBinding"
