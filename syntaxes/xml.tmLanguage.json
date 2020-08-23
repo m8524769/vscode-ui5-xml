@@ -232,25 +232,44 @@
       "name": "invalid.illegal.bad-ampersand.xml"
     },
     "accessor": {
-      "match": "[a-zA-Z0-9_>/]+",
-      "captures": {
+      "match": ">|/|>/",
+      "name": "punctuation.accessor.js"
+    },
+    "division": {
+      "match": "/",
+      "name": "keyword.operator.arithmetic.js"
+    },
+    "expression": {
+      "begin": "\\{:?=",
+      "beginCaptures": {
         "0": {
-          "patterns": [
-            {
-              "include": "source.js"
-            }
-          ]
+          "name": "punctuation.definition.template-expression.begin.js"
         }
-      }
+      },
+      "end": "}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.template-expression.end.js"
+        }
+      },
+      "name": "variable.other.readwrite.js",
+      "patterns": [
+        {
+          "include": "#division"
+        },
+        {
+          "include": "#dataBindingInExpression"
+        },
+        {
+          "include": "source.js"
+        }
+      ]
     },
     "dataBinding": {
-      "begin": "(\\{)(:?=)?",
+      "begin": "\\{",
       "beginCaptures": {
-        "1": {
+        "0": {
           "name": "punctuation.definition.block.js"
-        },
-        "2": {
-          "name": "keyword.operator.assignment.js"
         }
       },
       "end": "}",
@@ -263,9 +282,6 @@
       "patterns": [
         {
           "include": "#accessor"
-        },
-        {
-          "include": "#dataBindingInExpression"
         },
         {
           "include": "source.js"
@@ -314,6 +330,9 @@
         },
         {
           "include": "#bare-ampersand"
+        },
+        {
+          "include": "#expression"
         },
         {
           "include": "#dataBinding"
@@ -385,6 +404,9 @@
         },
         {
           "include": "#bare-ampersand"
+        },
+        {
+          "include": "#expression"
         },
         {
           "include": "#dataBinding"

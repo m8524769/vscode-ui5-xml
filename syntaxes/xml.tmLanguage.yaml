@@ -83,9 +83,6 @@ patterns:
       - include: "#tagStuff"
   - include: "#entity"
   - include: "#bare-ampersand"
-  # - include: "#accessor"
-  # - include: "#dataBinding"
-  # - include: "#dataBindingInExpression"
   - begin: "<%@"
     beginCaptures:
       "0":
@@ -141,18 +138,30 @@ repository:
     match: "&"
     name: invalid.illegal.bad-ampersand.xml
   accessor:
-    match: "[a-zA-Z0-9_>/]+"
-    captures:
-      "0":
-        patterns:
-          - include: source.js
-  dataBinding:
-    begin: "(\\{)(:?=)?"
+    match: ">|/|>/"
+    name: punctuation.accessor.js
+  division:
+    match: "/"
+    name: keyword.operator.arithmetic.js
+  expression:
+    begin: "\\{:?="
     beginCaptures:
-      "1":
+      "0":
+        name: punctuation.definition.template-expression.begin.js
+    end: "}"
+    endCaptures:
+      "0":
+        name: punctuation.definition.template-expression.end.js
+    name: variable.other.readwrite.js
+    patterns:
+      - include: "#division"
+      - include: "#dataBindingInExpression"
+      - include: source.js
+  dataBinding:
+    begin: "\\{"
+    beginCaptures:
+      "0":
         name: punctuation.definition.block.js
-      "2":
-        name: keyword.operator.assignment.js
     end: "}"
     endCaptures:
       "0":
@@ -160,7 +169,6 @@ repository:
     name: variable.other.readwrite.js
     patterns:
       - include: "#accessor"
-      - include: "#dataBindingInExpression"
       - include: source.js
   dataBindingInExpression:
     begin: "\\${"
@@ -187,6 +195,7 @@ repository:
     patterns:
       - include: "#entity"
       - include: "#bare-ampersand"
+      - include: "#expression"
       - include: "#dataBinding"
   entity:
     captures:
@@ -228,6 +237,7 @@ repository:
     patterns:
       - include: "#entity"
       - include: "#bare-ampersand"
+      - include: "#expression"
       - include: "#dataBinding"
   tagStuff:
     patterns:
