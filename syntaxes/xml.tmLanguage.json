@@ -232,7 +232,7 @@
       "name": "invalid.illegal.bad-ampersand.xml"
     },
     "accessor": {
-      "match": ">|/|>/",
+      "match": "(>|/)",
       "name": "punctuation.accessor.js"
     },
     "division": {
@@ -289,7 +289,7 @@
       ]
     },
     "dataBindingInExpression": {
-      "begin": "\\${",
+      "begin": "(\\$|\\%){",
       "beginCaptures": {
         "0": {
           "name": "punctuation.definition.template-expression.begin.js"

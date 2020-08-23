@@ -138,7 +138,7 @@ repository:
     match: "&"
     name: invalid.illegal.bad-ampersand.xml
   accessor:
-    match: ">|/|>/"
+    match: "(>|/)"
     name: punctuation.accessor.js
   division:
     match: "/"
@@ -171,7 +171,7 @@ repository:
       - include: "#accessor"
       - include: source.js
   dataBindingInExpression:
-    begin: "\\${"
+    begin: "(\\$|\\%){"
     beginCaptures:
       "0":
         name: punctuation.definition.template-expression.begin.js
