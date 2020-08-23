@@ -2,7 +2,7 @@
   "name": "ui5-xml-support",
   "displayName": "UI5 XML Support",
   "description": "Syntax highlighting for SAPUI5 XML view.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": "github:m8524769/ui5-xml-support",
   "author": "yk <m8524769@gmail.com> (https://m8524769.github.io/)",
   "publisher": "m8524769",
