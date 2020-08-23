@@ -147,11 +147,13 @@ repository:
     match: "\\$(parameters|source|event|controller)"
     name: variable.parameter.js
   function:
-    begin: "([a-zA-Z_][a-zA-Z0-9_]+)(\\()"
+    begin: "(\\.)([a-zA-Z_][a-zA-Z0-9_]+)(\\()"
     beginCaptures:
       "1":
-        name: entity.name.function.js
+        name: punctuation.accessor.js
       "2":
+        name: entity.name.function.js
+      "3":
         name: meta.brace.round.js
     end: "\\)"
     endCaptures:
