@@ -141,9 +141,11 @@ repository:
     match: "&"
     name: invalid.illegal.bad-ampersand.xml
   accessor:
-    match: "[a-zA-Z0-9_]+(>/|/|>)"
+    match: "(/?)[a-zA-Z0-9_]+(>/|/|>)?"
     captures:
       "1":
+        name: punctuation.accessor.js
+      "2":
         name: punctuation.accessor.js
   dataBinding:
     begin: "(\\{)(:?=)?"

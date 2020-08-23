@@ -1,8 +1,11 @@
 {
   "name": "ui5-xml-support",
   "displayName": "UI5 XML Support",
-  "description": "Syntax highlighting for SAPUI5/OPENUI5 XML view",
+  "description": "Syntax highlighting for SAPUI5 XML view.",
   "version": "0.0.1",
+  "repository": "github:m8524769/ui5-xml-support",
+  "author": "yk <m8524769@gmail.com> (https://m8524769.github.io/)",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.48.0"
   },
@@ -34,12 +37,11 @@
         "path": "./syntaxes/xml.tmLanguage.json",
         "embeddedLanguages": {
           "text.xml": "xml",
-          "text.html": "html",
           "source.js": "javascript"
-				},
+        },
         "tokenTypes": {
-					"meta.tag string.quoted": "other"
-				}
+          "meta.tag string.quoted": "other"
+        }
       }
     ]
   },
