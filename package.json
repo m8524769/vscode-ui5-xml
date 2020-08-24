@@ -5,7 +5,7 @@
   "version": "0.2.1",
   "repository": "github:m8524769/ui5-xml-support",
   "author": "yk <m8524769@gmail.com> (https://m8524769.github.io/)",
-  "publisher": "m8524769",
+  "publisher": "yk",
   "license": "MIT",
   "engines": {
     "vscode": "^1.48.0"

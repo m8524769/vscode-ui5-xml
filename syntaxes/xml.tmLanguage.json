@@ -231,6 +231,10 @@
       "match": "&",
       "name": "invalid.illegal.bad-ampersand.xml"
     },
+    "predefinedEntity": {
+      "match": "&(quot|amp|apos|lt|gt);",
+      "name": "constant.character.entity.xml"
+    },
     "accessor": {
       "match": "(>|/)",
       "name": "punctuation.accessor.js"
@@ -294,6 +298,9 @@
           "include": "#division"
         },
         {
+          "include": "#predefinedEntity"
+        },
+        {
           "include": "#dataBindingInExpression"
         },
         {
@@ -325,7 +332,7 @@
       ]
     },
     "dataBindingInExpression": {
-      "begin": "(\\$|\\%){",
+      "begin": "(\\$|\\%)\\{",
       "beginCaptures": {
         "0": {
           "name": "punctuation.definition.template-expression.begin.js"

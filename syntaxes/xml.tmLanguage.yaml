@@ -137,6 +137,9 @@ repository:
   bare-ampersand:
     match: "&"
     name: invalid.illegal.bad-ampersand.xml
+  predefinedEntity:
+    match: "&(quot|amp|apos|lt|gt);"
+    name: constant.character.entity.xml
   accessor:
     match: "(>|/)"
     name: punctuation.accessor.js
@@ -176,6 +179,7 @@ repository:
     name: variable.other.readwrite.js
     patterns:
       - include: "#division"
+      - include: "#predefinedEntity"
       - include: "#dataBindingInExpression"
       - include: source.js
   dataBinding:
@@ -192,7 +196,7 @@ repository:
       - include: "#accessor"
       - include: source.js
   dataBindingInExpression:
-    begin: "(\\$|\\%){"
+    begin: "(\\$|\\%)\\{"
     beginCaptures:
       "0":
         name: punctuation.definition.template-expression.begin.js
