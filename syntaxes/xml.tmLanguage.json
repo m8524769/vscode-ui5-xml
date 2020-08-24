@@ -236,7 +236,7 @@
       "name": "constant.character.entity.xml"
     },
     "accessor": {
-      "match": "(>|/)",
+      "match": "(>|/|#|@)",
       "name": "punctuation.accessor.js"
     },
     "division": {

@@ -141,7 +141,7 @@ repository:
     match: "&(quot|amp|apos|lt|gt);"
     name: constant.character.entity.xml
   accessor:
-    match: "(>|/)"
+    match: "(>|/|#|@)"
     name: punctuation.accessor.js
   division:
     match: "/"
