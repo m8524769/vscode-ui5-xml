@@ -1,3 +1,4 @@
+---
 information_for_contributors:
   - This file has been converted from https://github.com/atom/language-xml/blob/master/grammars/xml.cson
   - If you want to provide a fix or improvement, please create a pull request against
@@ -137,9 +138,6 @@ repository:
   bare-ampersand:
     match: "&"
     name: invalid.illegal.bad-ampersand.xml
-  predefinedEntity:
-    match: "&(quot|amp|apos|lt|gt);"
-    name: constant.character.entity.xml
   accessor:
     match: "(>|/|#|@)"
     name: punctuation.accessor.js
@@ -179,7 +177,7 @@ repository:
     name: variable.other.readwrite.js
     patterns:
       - include: "#division"
-      - include: "#predefinedEntity"
+      - include: "#entity"
       - include: "#dataBindingInExpression"
       - include: source.js
   dataBinding:
@@ -218,7 +216,7 @@ repository:
       "0":
         name: punctuation.definition.string.end.xml
     name: string.quoted.double.xml
-    patterns:
+    patterns: &stringPatterns
       - include: "#entity"
       - include: "#bare-ampersand"
       - include: "#expression"
@@ -261,12 +259,7 @@ repository:
       "0":
         name: punctuation.definition.string.end.xml
     name: string.quoted.single.xml
-    patterns:
-      - include: "#entity"
-      - include: "#bare-ampersand"
-      - include: "#expression"
-      - include: "#function"
-      - include: "#dataBinding"
+    patterns: *stringPatterns
   tagStuff:
     patterns:
       - captures:
