@@ -1,4 +1,6 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+.editorconfig
 vsc-extension-quickstart.md
+syntaxes/xml.tmLanguage.yaml
