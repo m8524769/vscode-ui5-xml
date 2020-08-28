@@ -1,3 +1,5 @@
+package-lock.json
+yarn.lock
 .vscode/**
 .vscode-test/**
 .gitignore
