@@ -13,6 +13,11 @@
   "categories": [
     "Programming Languages"
   ],
+  "keywords": [
+    "ui5",
+    "sapui5",
+    "xml"
+  ],
   "scripts": {
     "compile": "js-yaml syntaxes/xml.tmLanguage.yaml > syntaxes/xml.tmLanguage.json"
   },
