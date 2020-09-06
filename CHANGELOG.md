@@ -1,3 +1,9 @@
+## 0.3.0 (2020-9-5)
+
+### Features
+
+- Add snippets for special event parameters triggered with `$`.
+
 ## 0.2.4 (2020-8-29)
 
 ### Features

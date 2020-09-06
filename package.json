@@ -49,6 +49,12 @@
           "meta.tag string.quoted": "other"
         }
       }
+    ],
+    "snippets": [
+      {
+        "language": "xml",
+        "path": "./snippets/snippets.json"
+      }
     ]
   },
   "devDependencies": {

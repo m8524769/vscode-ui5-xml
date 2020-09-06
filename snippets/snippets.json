@@ -1,0 +1,30 @@
+{
+  "$parameters": {
+    "prefix": "$parameters",
+    "body": [
+      "\\$parameters"
+    ],
+    "description": "Event parameters."
+  },
+  "$source": {
+    "prefix": "$source",
+    "body": [
+      "\\$source"
+    ],
+    "description": "A `ManagedObjectModel` which wraps the control firing the event."
+  },
+  "$event": {
+    "prefix": "$event",
+    "body": [
+      "\\$event"
+    ],
+    "description": "The original event object."
+  },
+  "$controller": {
+    "prefix": "$controller",
+    "body": [
+      "\\$controller"
+    ],
+    "description": "The controller context."
+  }
+}
