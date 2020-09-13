@@ -1,8 +1,11 @@
-package-lock.json
-yarn.lock
+**/package-lock.json
+**/yarn.lock
 .vscode/**
 .vscode-test/**
+**/*.ts
+**/*.map
 .gitignore
 .editorconfig
-vsc-extension-quickstart.md
+**/tsconfig.json
+**/tsconfig.base.json
 syntaxes/xml.tmLanguage.yaml

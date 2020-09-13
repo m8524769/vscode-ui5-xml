@@ -1,3 +1,9 @@
+## 0.4.1 (2020-9-13)
+
+### Fix Bugs
+
+- Allow auto close before whitespace.
+
 ## 0.4.0 (2020-9-13)
 
 ### Features
