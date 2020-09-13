@@ -12,5 +12,5 @@ Syntax highlighting for SAPUI5 XML view.
   * Expression Binding
   * Member function calls, such as `".foo($event, {/name})"`
   * Special event parameters, such as `$source`, `$event`, etc.
-
+- Highlight UI5 controls with JSX component style.
 - Snippets for special event parameters triggered with `$`.

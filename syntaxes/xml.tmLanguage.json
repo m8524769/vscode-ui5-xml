@@ -58,7 +58,7 @@
       "include": "#comments"
     },
     {
-      "begin": "(<)((?:([-_a-zA-Z0-9]+)(:))?([-_a-zA-Z0-9:]+))(?=(\\s[^>]*)?></\\2>)",
+      "begin": "(<)((?:([-_a-zA-Z0-9]+)(:))?([A-Z]\\w*)?([-_a-zA-Z0-9:]+)?)(?=(\\s[^>]*)?></\\2>)",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.tag.xml"
@@ -73,10 +73,13 @@
           "name": "punctuation.separator.namespace.xml"
         },
         "5": {
+          "name": "support.class.component.js.jsx"
+        },
+        "6": {
           "name": "entity.name.tag.localname.xml"
         }
       },
-      "end": "(>)(</)((?:([-_a-zA-Z0-9]+)(:))?([-_a-zA-Z0-9:]+))(>)",
+      "end": "(>)(</)((?:([-_a-zA-Z0-9]+)(:))?([A-Z]\\w*)?([-_a-zA-Z0-9:]+)?)(>)",
       "endCaptures": {
         "1": {
           "name": "punctuation.definition.tag.xml"
@@ -94,9 +97,12 @@
           "name": "punctuation.separator.namespace.xml"
         },
         "6": {
-          "name": "entity.name.tag.localname.xml"
+          "name": "support.class.component.js.jsx"
         },
         "7": {
+          "name": "entity.name.tag.localname.xml"
+        },
+        "8": {
           "name": "punctuation.definition.tag.xml"
         }
       },
@@ -108,7 +114,7 @@
       ]
     },
     {
-      "begin": "(</?)(?:([-\\w\\.]+)((:)))?([-\\w\\.:]+)",
+      "begin": "(</?)(?:([-\\w\\.]+)((:)))?([A-Z]\\w*)?([-\\w\\.:]+)?",
       "captures": {
         "1": {
           "name": "punctuation.definition.tag.xml"
@@ -123,6 +129,9 @@
           "name": "punctuation.separator.namespace.xml"
         },
         "5": {
+          "name": "support.class.component.js.jsx"
+        },
+        "6": {
           "name": "entity.name.tag.localname.xml"
         }
       },

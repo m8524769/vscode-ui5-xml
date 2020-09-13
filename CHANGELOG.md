@@ -1,3 +1,9 @@
+## 0.4.0 (2020-9-13)
+
+### Features
+
+- Highlight UI5 controls with JSX component style.
+
 ## 0.3.0 (2020-9-5)
 
 ### Features
