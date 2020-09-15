@@ -1,6 +1,9 @@
 # .vsix Files
 *.vsix
 
+# TypeScript Output
+**/out
+
 # Dependencies
 node_modules
 
