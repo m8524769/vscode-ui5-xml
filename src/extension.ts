@@ -1,8 +1,9 @@
-import { languages, ExtensionContext, LanguageConfiguration, IndentAction } from 'vscode';
+import { languages, IndentAction } from 'vscode';
 
-export function activate(context: ExtensionContext) {
+export function activate() {
 
-  const xmlConfiguration: LanguageConfiguration = {
+  languages.setLanguageConfiguration("xml", {
+    // Referenced from: https://github.com/redhat-developer/vscode-xml/blob/master/src/extension.ts#L363-L377
     indentationRules: {
       increaseIndentPattern: /<(?!\?|[^>]*\/>)([-_\.A-Za-z0-9]+)(?=\s|>)\b[^>]*>(?!.*<\/\1>)|<!--(?!.*-->)|\{[^}"']*$/,
       decreaseIndentPattern: /^\s*(<\/[-_\.A-Za-z0-9]+\b[^>]*>|-->|\})/
@@ -18,9 +19,7 @@ export function activate(context: ExtensionContext) {
         action: { indentAction: IndentAction.Indent }
       }
     ]
-  }
-
-  languages.setLanguageConfiguration("xml", xmlConfiguration);
+  });
 
 }
 
