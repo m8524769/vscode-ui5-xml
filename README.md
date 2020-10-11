@@ -15,3 +15,12 @@ Syntax highlighting for SAPUI5 XML view.
 - Highlight UI5 controls with JSX component style.
 - Auto-indent.
 - Snippets for special event parameters triggered with `$`.
+
+## For Developers
+
+```shell
+npm i
+npm run dev
+```
+
+Then run the VS Code Debugger to preview the functionality.
