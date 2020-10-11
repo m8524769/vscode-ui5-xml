@@ -5,7 +5,7 @@
 
 Syntax highlighting for SAPUI5 XML view.
 
-![demo.gif](https://github.com/m8524769/vscode-ui5-xml/raw/master/demo.gif)
+![demo.gif](https://github.com/m8524769/vscode-ui5-xml/raw/master/images/demo.gif)
 
 ## Features
 

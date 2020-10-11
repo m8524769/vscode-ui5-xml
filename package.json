@@ -18,6 +18,7 @@
     "sapui5",
     "xml"
   ],
+  "icon": "images/icon.png",
   "activationEvents": [
     "onLanguage:xml"
   ],
