@@ -8,7 +8,7 @@
   "publisher": "m8524769",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.49.0"
+    "vscode": "^1.50.0"
   },
   "categories": [
     "Programming Languages"
@@ -23,8 +23,9 @@
   ],
   "main": "./out/extension.js",
   "scripts": {
-    "tsc:watch": "tsc -watch -p ./",
-    "compile": "js-yaml syntaxes/xml.tmLanguage.yaml > syntaxes/xml.tmLanguage.json"
+    "dev": "run-p syntax:watch tsc:watch",
+    "syntax:watch": "yaml2json syntaxes/xml.tmLanguage.yaml --save --watch",
+    "tsc:watch": "tsc -watch -p ./"
   },
   "contributes": {
     "languages": [
@@ -63,8 +64,9 @@
     ]
   },
   "devDependencies": {
-    "@types/vscode": "^1.49.0",
-    "js-yaml": "^3.14.0",
-    "typescript": "^4.0.2"
+    "@types/vscode": "^1.50.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.0.2",
+    "yamljs": "^0.3.0"
   }
 }

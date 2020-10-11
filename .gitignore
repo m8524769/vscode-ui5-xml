@@ -1,6 +1,9 @@
 # .vsix Files
 *.vsix
 
+# Syntax Output
+syntaxes/xml.tmLanguage.json
+
 # TypeScript Output
 **/out
 
