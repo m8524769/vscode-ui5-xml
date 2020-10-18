@@ -1,3 +1,10 @@
+## 0.6.0 (2020-10-24)
+
+### Features
+
+- Auto-complete the binding information in data binding syntax.
+- Add snippets for UI5 XML view/fragment template triggered with `"ui5"`.
+
 ## 0.5.0 (2020-9-15)
 
 ### Features

@@ -1,30 +1,27 @@
 {
-  "$parameters": {
-    "prefix": "$parameters",
+  "UI5 XML View": {
+    "prefix": "ui5",
+    "description": "UI5 XML view template",
+    "types": "xml",
     "body": [
-      "\\$parameters"
-    ],
-    "description": "Event parameters."
+      "<mvc:View",
+      "\tcontrollerName=\"$1\"",
+      "\txmlns:mvc=\"sap.ui.core.mvc\"",
+      ">",
+      "\t$2",
+      "</mvc:View>"
+    ]
   },
-  "$source": {
-    "prefix": "$source",
+  "UI5 XML Fragment": {
+    "prefix": "ui5-fragment",
+    "description": "UI5 XML fragment template",
+    "types": "xml",
     "body": [
-      "\\$source"
-    ],
-    "description": "A `ManagedObjectModel` which wraps the control firing the event."
-  },
-  "$event": {
-    "prefix": "$event",
-    "body": [
-      "\\$event"
-    ],
-    "description": "The original event object."
-  },
-  "$controller": {
-    "prefix": "$controller",
-    "body": [
-      "\\$controller"
-    ],
-    "description": "The controller context."
+      "<core:FragmentDefinition",
+      "\txmlns:core=\"sap.ui.core\"",
+      ">",
+      "\t$1",
+      "</core:FragmentDefinition>"
+    ]
   }
 }
