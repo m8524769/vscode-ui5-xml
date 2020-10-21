@@ -1,3 +1,6 @@
+/**
+ * See {@link https://sapui5.hana.ondemand.com/resources/sap/ui/core/themes/base/library.less library.less} in SAPUI5 source code.
+ */
 export const CSS_CLASSES = [
   "sapUiThemeDesignerCustomCssCheck",
   "sapUiThemeDesignerCustomCss",

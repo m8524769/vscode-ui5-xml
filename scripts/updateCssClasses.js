@@ -14,6 +14,11 @@ https.get(source, res => {
       .map(className => `"${className}"`.replace(".", ""))
       .join(",\n  ");
 
-    fs.writeFileSync(output, `export const CSS_CLASSES = [\n  ${classNames}\n];`);
+    fs.writeFileSync(
+      output,
+      "/**\n" +
+      ` * See {@link ${source} library.less} in SAPUI5 source code.\n` +
+      " */\n" +
+      `export const CSS_CLASSES = [\n  ${classNames}\n];`);
   });
 });

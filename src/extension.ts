@@ -14,6 +14,7 @@ import { buildAst } from '@xml-tools/ast';
 import { astPositionAtOffset } from '@xml-tools/ast-position';
 
 import { CSS_CLASSES } from './constants/cssClasses';
+import { SAP_ICONS } from './constants/sapIcons';
 
 const isUI5XMLView = (fileName: string): boolean => /(\.view\.xml|\.fragment\.xml)$/.test(fileName);
 
@@ -52,12 +53,15 @@ export function activate(context: ExtensionContext) {
         return undefined;
       }
 
-      /**
-       * See {@link https://sapui5.hana.ondemand.com/resources/sap/ui/core/themes/base/library.less library.less}
-       */
       if (astPosition.astNode.key === "class") {
         return CSS_CLASSES.map(
           className => new CompletionItem(className, CompletionItemKind.Value)
+        );
+      }
+
+      if (astPosition.astNode.key === "icon") {
+        return SAP_ICONS.map(
+          icon => new CompletionItem(`sap-icon://${icon}`, CompletionItemKind.Value)
         );
       }
 
