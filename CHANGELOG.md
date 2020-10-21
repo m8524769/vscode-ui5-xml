@@ -4,6 +4,7 @@
 
 - Auto-complete the binding information in data binding syntax.
 - Auto-complete UI5 built-in CSS classnames.
+- Auto-complete SAPUI5 built-in icons.
 - Add snippets for UI5 XML view/fragment template triggered with `"ui5"`.
 
 ## 0.5.0 (2020-9-15)
