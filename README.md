@@ -3,7 +3,7 @@
 
 # UI5 XML Support
 
-Syntax highlighting for SAPUI5 XML view.
+Syntax highlighting & Auto-complete for SAPUI5 XML view.
 
 <img src=https://raw.githubusercontent.com/m8524769/vscode-ui5-xml/master/images/demo.gif width=546>
 
@@ -16,7 +16,8 @@ Syntax highlighting for SAPUI5 XML view.
   * Special event parameters, such as `$source`, `$event`, etc.
 - Highlight UI5 controls with JSX component style.
 - Auto-complete the binding information in data binding syntax.
-- Auto-complete the special event parameters.
+- Auto-complete UI5 built-in CSS classnames.
+- Auto-complete special event parameters.
 - Auto-indent.
 - Snippets for UI5 XML view/fragment template triggered with `"ui5"`.
 
@@ -32,5 +33,6 @@ Then run the VS Code Debugger to preview the functionality.
 
 ```shell
 npm i -g vsce
+npm run build:prod
 vsce package
 ```
