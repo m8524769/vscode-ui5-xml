@@ -25,7 +25,7 @@ Syntax highlighting & Auto-complete for SAPUI5 XML view.
 
 ## For Developers
 
-```shell
+```sh
 npm i
 ```
 
@@ -33,8 +33,16 @@ Then run the VS Code Debugger to preview the functionality.
 
 #### Generate the `.vsix` package
 
-```shell
+```sh
+# Install the CLI tool globally
 npm i -g vsce
+
+# Compile the source code (Skip this step if the debugger is running)
+npm run dev
+
+# Bundle this extension with Webpack
 npm run build:prod
+
+# Build the package
 vsce package
 ```

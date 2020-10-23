@@ -59,6 +59,7 @@ export function activate(context: ExtensionContext) {
         );
       }
 
+      // Partial support for icon auto-complete
       if (astPosition.astNode.key === "icon") {
         return SAP_ICONS.map(
           icon => new CompletionItem(`sap-icon://${icon}`, CompletionItemKind.Value)
