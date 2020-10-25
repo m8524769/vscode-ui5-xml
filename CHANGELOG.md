@@ -1,3 +1,9 @@
+## 0.6.1 (2020-10-27)
+
+### Fix Bugs
+
+- Cannot auto-close before `>`.
+
 ## 0.6.0 (2020-10-24)
 
 ### Features
