@@ -1,5 +1,6 @@
 [![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/version/m8524769.ui5-xml-support.svg)](https://marketplace.visualstudio.com/items?itemName=m8524769.ui5-xml-support)
 [![installs](https://vsmarketplacebadge.apphb.com/installs-short/m8524769.ui5-xml-support.svg)](https://marketplace.visualstudio.com/items?itemName=m8524769.ui5-xml-support)
+[![rating](https://vsmarketplacebadge.apphb.com/rating-short/m8524769.ui5-xml-support.svg)](https://marketplace.visualstudio.com/items?itemName=m8524769.ui5-xml-support)
 
 # UI5 XML Support
 
