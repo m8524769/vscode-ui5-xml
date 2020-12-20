@@ -1,3 +1,9 @@
+## 0.6.2 (2020-12-20)
+
+### Fix Bugs
+
+- Cannot recognize `[]` in data binding syntax.
+
 ## 0.6.1 (2020-10-27)
 
 ### Fix Bugs
