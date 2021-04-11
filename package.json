@@ -2,7 +2,7 @@
   "name": "ui5-xml-support",
   "displayName": "UI5 XML Support",
   "description": "Syntax highlighting & Auto-complete for SAPUI5 XML view.",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "repository": "m8524769/vscode-ui5-xml",
   "author": "yk <m8524769@gmail.com> (https://m8524769.github.io/)",
   "publisher": "m8524769",
