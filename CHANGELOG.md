@@ -1,3 +1,9 @@
+## 0.6.3 (2021-4-11)
+
+### Fix Bugs
+
+- Auto-indent does not work in the latest version of VSCode.
+
 ## 0.6.2 (2020-12-20)
 
 ### Fix Bugs
