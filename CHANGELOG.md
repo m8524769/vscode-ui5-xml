@@ -1,3 +1,9 @@
+## 0.6.4 (2022-4-14)
+
+### Others
+
+- Update CSS classes.
+
 ## 0.6.3 (2021-4-11)
 
 ### Fix Bugs
